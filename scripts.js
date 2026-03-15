@@ -6,11 +6,11 @@ if(operator==="+"){
   console.log(num1 + num2 );
  }
 
-if(operator==="-"){
+else if(operator==="-"){
   console.log(num1 - num2 );
 }
 
-if(operator==="/"){
+else if(operator==="/"){
   if(num2!=0){
   console.log(num1 / num2 );
   }
@@ -19,38 +19,39 @@ if(operator==="/"){
   }
 }
 
-if(operator==="*"){
+else if(operator==="*"){
   console.log(num1 * num2 );
 }
 
 
 
+
 //student mark analysis
 
-let mark = 100;
-bonus=5
-mark +=bonus
+let marks = 100;
+let bonus = 5;
+
+marks += bonus;
+
 let grade;
-if(mark>90){
+
+if(marks >= 90){
     grade ="A"
-    
 }
-else if(mark>=70 && mark<=89){
+else if(marks >= 70 && marks <= 89){
     grade ="B"
-    
 }
-else if(mark>=50 && mark<=69){
+else if(marks >= 50 && marks <= 69){
     grade ="C"
-    
 }
-else if(mark<50){
+else if(marks < 50){
     grade ="F"
-   
 }
 
+let result = marks >= 50 ? "Pass" : "Fail";
 
-let Result = mark >= 50 ? "Pass" : "Fail";
 let remark;
+
 switch(grade)
 {
    case "A":
@@ -67,4 +68,4 @@ switch(grade)
            break;
 }
 
-console.log("Marks = "+ mark +"\nGrade="+grade+"\nResult = "+Result+"\nRemark ="+remark)
+console.log("Marks = "+ marks +"\nGrade="+grade+"\nResult = "+result+"\nRemark = "+remark)
